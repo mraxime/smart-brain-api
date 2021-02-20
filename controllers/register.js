@@ -1,13 +1,4 @@
 // REGISTER ROUTE
-// Gets the email, name and password that the user wrote from the body
-// and uses Knex to insert new user information into the database.
-
-// A transaction (trx) is needed when you're trying to do more than one thing at a time.
-// Here we insert the hashed password and email into the login table in the database.
-// It then returns the email and then we use the login email to return another
-// trx transaction to insert into the users table and responds with the
-// newly created user in json. Then finally it has to be committed and in case
-// anything fails we roll back the changes.
 
 const handleRegister = (req, res, db, bcrypt) => {
   const { email, name, password } = req.body;

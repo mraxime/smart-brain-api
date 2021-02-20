@@ -17,7 +17,7 @@ const profile = require('./controllers/profile');
 const image = require('./controllers/image');
 
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = 0;
-// Here's the connection to the database using Knex
+// Connection to the database using Knex
 const db = knex({
   client: 'pg', // pg for postgres
   connection: {
@@ -38,11 +38,8 @@ app.get('/', (req, res) => {
   res.send('its working!');
 });
 
-// SIGNIN ROUTE (more comments in controllers)
-// In here we're doing a dependency injection ie. injecting the dependencies
-// that the handleRegister function needs like the knex database and bcrypt.
+// SIGNIN ROUTE
 app.post('/signin', signin.handleSignin(db, bcrypt));
-// a bit more advanced way is used here - the other routes could be changed to similar syntax depending on preference
 
 // REGISTER ROUTE
 app.post('/register', (req, res) => {
