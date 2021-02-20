@@ -24,7 +24,7 @@ const db = knex({
     connectionString:
       process.env.DATABASE_URL ||
       'postgres://ftrvgmjyrgsdhm:48a929851f7603989966a32ae0d963fa7b0ce8713283421816436c444fdea528@ec2-54-164-241-193.compute-1.amazonaws.com:5432/dajed6ov35gpbr',
-    ssl: true,
+    ssl: false,
   },
 });
 
