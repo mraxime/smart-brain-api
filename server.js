@@ -1,5 +1,5 @@
 const express = require('express');
-require('dotenv').config();
+// require('dotenv').config();
 const local_env = require('dotenv').config({ path: __dirname + '/.env.local' });
 const bodyParser = require('body-parser');
 // Do not forget to use body parser!! It is pretty much a standard
