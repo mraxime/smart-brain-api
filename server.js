@@ -39,7 +39,7 @@ app.use(cors());
 
 // ROOT ROUTE
 app.get('/', (req, res) => {
-  res.send('it is working!');
+  res.send(db.users);
 });
 
 // SIGNIN ROUTE (more comments in controllers)
