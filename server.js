@@ -16,13 +16,12 @@ const signin = require('./controllers/signin');
 const profile = require('./controllers/profile');
 const image = require('./controllers/image');
 
-process.env.NODE_TLS_REJECT_UNAUTHORIZED = 0;
+// process.env.NODE_TLS_REJECT_UNAUTHORIZED = 0;
 // Here's the connection to the database using Knex
 const db = knex({
   client: 'pg', // pg for postgres
   connection: {
     connectionString:
-      process.env.DATABASE_URL ||
       'postgres://ftrvgmjyrgsdhm:48a929851f7603989966a32ae0d963fa7b0ce8713283421816436c444fdea528@ec2-54-164-241-193.compute-1.amazonaws.com:5432/dajed6ov35gpbr',
     ssl: false,
   },
