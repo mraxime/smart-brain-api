@@ -20,8 +20,18 @@ process.env.NODE_TLS_REJECT_UNAUTHORIZED = 0;
 // Here's the connection to the database using Knex
 const db = knex({
   client: 'pg', // pg for postgres
-  connection:
-    'postgres://njkjiwdjvdygtu:e6361ea61b55e9880dffb2a9cbca0241cefb83f0c7111d169619c21f9ae7a280@ec2-18-204-74-74.compute-1.amazonaws.com:5432/d926edv4h0d127',
+  connection: {
+    host: 'ec2-18-204-74-74.compute-1.amazonaws.com',
+    database: 'd926edv4h0d127',
+    user: 'njkjiwdjvdygtu',
+    port: 5432,
+    password:
+      'e6361ea61b55e9880dffb2a9cbca0241cefb83f0c7111d169619c21f9ae7a280',
+    // connectionString: ,
+    // ssl: {
+    //   rejectUnauthorized: false,
+    // },
+  },
 });
 
 const app = express();
