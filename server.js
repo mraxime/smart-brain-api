@@ -20,16 +20,8 @@ process.env.NODE_TLS_REJECT_UNAUTHORIZED = 0;
 // Here's the connection to the database using Knex
 const db = knex({
   client: 'pg', // pg for postgres
-  connection: {
-    // host: '127.0.0.1',
-    // user: 'postgres',
-    // password: 'Duli4141',
-    // database: 'smart-brain',
-    connectionString: process.env.DATABASE_URL,
-    ssl: {
-      rejectUnauthorized: false,
-    },
-  },
+  connection:
+    'postgres://njkjiwdjvdygtu:e6361ea61b55e9880dffb2a9cbca0241cefb83f0c7111d169619c21f9ae7a280@ec2-18-204-74-74.compute-1.amazonaws.com:5432/d926edv4h0d127',
 });
 
 const app = express();
