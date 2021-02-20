@@ -8,7 +8,7 @@
     "hero": "git add . && git commit -m \"update\" && git push heroku master"
   },
   "keywords": [],
-  "author": "",
+  "author": "Maxime",
   "license": "ISC",
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
