@@ -21,6 +21,7 @@ const db = knex({
   client: 'pg', // pg for postgres
   connection: {
     connectionString:
+      process.env.DATABASE_URL ||
       'postgres://njkjiwdjvdygtu:e6361ea61b55e9880dffb2a9cbca0241cefb83f0c7111d169619c21f9ae7a280@ec2-18-204-74-74.compute-1.amazonaws.com:5432/d926edv4h0d127',
     ssl: true,
   },
