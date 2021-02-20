@@ -2,7 +2,7 @@
   "name": "smart-brain-api",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "start": "node server.js",
     "hero": "git add . && git commit -m \"update\" && git push heroku master"
