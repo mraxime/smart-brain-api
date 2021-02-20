@@ -1,4 +1,5 @@
 const express = require('express');
+require('dotenv').config();
 const local_env = require('dotenv').config({ path: __dirname + '/.env.local' });
 const bodyParser = require('body-parser');
 // Do not forget to use body parser!! It is pretty much a standard
@@ -20,8 +21,7 @@ const image = require('./controllers/image');
 const db = knex({
   client: 'pg', // pg for postgres
   connection: {
-    connectionString:
-      'postgres://njkjiwdjvdygtu:e6361ea61b55e9880dffb2a9cbca0241cefb83f0c7111d169619c21f9ae7a280@ec2-18-204-74-74.compute-1.amazonaws.com:5432/d926edv4h0d127',
+    connectionString: process.env.DATABASE_URL,
     ssl: true,
   },
 });
