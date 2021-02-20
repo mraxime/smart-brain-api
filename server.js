@@ -16,13 +16,14 @@ const signin = require('./controllers/signin');
 const profile = require('./controllers/profile');
 const image = require('./controllers/image');
 
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = 0;
 // Here's the connection to the database using Knex
 const db = knex({
   client: 'pg', // pg for postgres
   connection: {
     connectionString:
       process.env.DATABASE_URL ||
-      'postgres://njkjiwdjvdygtu:e6361ea61b55e9880dffb2a9cbca0241cefb83f0c7111d169619c21f9ae7a280@ec2-18-204-74-74.compute-1.amazonaws.com:5432/d926edv4h0d127',
+      'postgres://ftrvgmjyrgsdhm:48a929851f7603989966a32ae0d963fa7b0ce8713283421816436c444fdea528@ec2-54-164-241-193.compute-1.amazonaws.com:5432/dajed6ov35gpbr',
     ssl: true,
   },
 });
@@ -34,7 +35,7 @@ app.use(cors());
 
 // ROOT ROUTE
 app.get('/', (req, res) => {
-  res.send('it is working!');
+  res.send('its working!');
 });
 
 // SIGNIN ROUTE (more comments in controllers)

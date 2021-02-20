@@ -1,30 +1,26 @@
 {
-  "name": "smart-brain",
+  "name": "smart-brain-api",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "hero": "git add . && git commit -m \"update\" && git push heroku master",
-    "start": "node server.js"
+    "start": "node server.js",
+    "hero": "git add . && git commit -m \"update\" && git push heroku master"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "engines": {
-    "node": "14.x"
-  },
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.19.0",
     "clarifai": "^2.9.1",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
-    "expres": "0.0.5",
     "express": "^4.17.1",
-    "knex": "^0.21.17",
-    "pg": "^8.5.1"
+    "knex": "^0.19.5",
+    "pg": "^7.18.2"
   },
   "devDependencies": {
-    "nodemon": "^2.0.7"
+    "nodemon": "^1.19.4"
   }
 }
